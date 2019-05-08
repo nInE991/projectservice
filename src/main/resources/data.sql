@@ -10,10 +10,10 @@ insert into orders_status(id, note)
 values ('5', 'Отменено');
 
 
-insert into price(id, name, price)
-VALUES ('1', 'Диагностика компьютера', 200);
-insert into price(id, name, price)
-VALUES ('2', 'Чистка компьютера', 300);
+-- insert into price(id, name, price)
+-- VALUES ('1', 'Диагностика компьютера', 200);
+-- insert into price(id, name, price)
+-- VALUES ('2', 'Чистка компьютера', 300);
 
 -- insert into roles(id, note, role)
 -- VALUES ('1', 'Администратор', 'ADMIN');

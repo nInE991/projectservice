@@ -12,10 +12,12 @@
         </div>
         <div class="row mt-3">
             <div class="col-4 mx-auto">
-                <form action="/track">
+                <form action="/track" method="post">
                     <div class="form-group">
                         <label for="number">Номер заказа :</label>
-                        <input class="form-control" id="number" name="order" type="text">
+                        <input class="form-control" id="number" name="order" required="required"
+                               onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"
+                               type="number">
                     </div>
                     <button class="btn btn-primary btn-block" type="submit">Проверить</button>
                 </form>

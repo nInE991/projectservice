@@ -17,11 +17,6 @@ public class EmployeesController {
 	@Inject
 	OrdersRepository ordersRepository;
 
-	@GetMapping()
-	public String index() {
-		return "/employees/index";
-	}
-
 	@GetMapping("/orders")
 	public String getOrders(Model model) {
 		model.addAttribute("waitList", ordersService.getListWait());

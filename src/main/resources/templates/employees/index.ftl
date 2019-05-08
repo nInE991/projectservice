@@ -7,9 +7,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Заказы</h5>
                         <div class="btn-group-vertical">
-                            <a class="btn btn-link text-left" href="#" style="color: black">Список</a>
-                            <a class="btn btn-link text-left" href="#" style="color: black">Найти</a>
-                            <a class="btn btn-link text-left" href="#" style="color: black">Добавить</a>
+                            <a class="btn btn-link text-left" href="/employees/orders" style="color: black">Список</a>
                         </div>
                     </div>
                 </div>

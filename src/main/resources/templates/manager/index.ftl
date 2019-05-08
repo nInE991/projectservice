@@ -7,9 +7,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Заказы</h5>
                         <div class="btn-group-vertical">
-                            <a class="btn btn-link text-left" href="#" style="color: black">Список</a>
-                            <a class="btn btn-link text-left" href="#" style="color: black">Найти</a>
-                            <a class="btn btn-link text-left" href="#" style="color: black">Добавить</a>
+                            <a class="btn btn-link text-left" href="/manager/orders" style="color: black">Список</a>
+                            <a class="btn btn-link text-left" href="/manager/orders/add"
+                               style="color: black">Добавить</a>
                         </div>
                     </div>
                 </div>
@@ -19,8 +19,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Касса</h5>
                         <div class="btn-group-vertical">
-                            <a class="btn btn-link text-left" href="#" style="color: black">Найти</a>
-                            <a class="btn btn-link text-left" href="#" style="color: black">Проверить за сегодня</a>
+                            <a class="btn btn-link text-left" href="/manager/cash" style="color: black">Список</a>
                         </div>
                     </div>
                 </div>
@@ -30,8 +29,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Клиенты</h5>
                         <div class="btn-group-vertical">
-                            <a class="btn btn-link text-left" href="#" style="color: black">Найти</a>
-                            <a class="btn btn-link text-left" href="#" style="color: black">Добавить</a>
+                            <a class="btn btn-link text-left" href="/manager/customer" style="color: black">Список</a>
+                            <a class="btn btn-link text-left" href="/manager/customer/add"
+                               style="color: black">Добавить</a>
                         </div>
                     </div>
                 </div>

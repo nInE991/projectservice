@@ -7,6 +7,7 @@ import com.example.projectservice.repository.PriceRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.inject.Inject;
@@ -29,7 +30,7 @@ public class MainController {
 		return "/pricelist";
 	}
 
-	@GetMapping("/track")
+	@PostMapping("/track")
 	public String getOrderHistory(@RequestParam("order") Integer id, Model model) {
 		var orders = ordersRepository.getOne(id);
 		model.addAttribute("orderHistory", ordersLogRepository.findByOrders(orders));

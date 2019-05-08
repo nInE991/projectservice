@@ -21,6 +21,7 @@ public class DirectorController {
 	OrdersService ordersService;
 	@Inject
 	PriceRepository priceRepository;
+
 	@GetMapping("/orders/day")
 	public String getOrdersDay(Model model) {
 		model.addAttribute("doneList", ordersService.getDoneList());
