@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('.registration').on('click', function () {
         $.ajax({
             type: 'POST',
-            url: '/admin//users/registration',
+            url: '/admin/users/registration',
             data: {
                 name: $('#name').val(),
                 lastName: $('#lastName').val(),
@@ -42,7 +42,7 @@ $(document).ready(function () {
             url: '/admin/users/' + $(this).data('id'),
             data: {},
             success: function (data) {
-                document.location.replace("/admin/employees");
+                document.location.replace("/admin/users");
             },
             error: function (xhr, status, error) {
                 alert(xhr.responseText);

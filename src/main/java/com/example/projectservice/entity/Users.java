@@ -15,6 +15,8 @@ public class Users {
 	private Boolean enable;
 	@Column
 	private String position;
+	@Column
+	private String role;
 	public Integer getId() {
 		return id;
 	}
@@ -53,5 +55,13 @@ public class Users {
 
 	public void setPosition(String position) {
 		this.position = position;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 }
