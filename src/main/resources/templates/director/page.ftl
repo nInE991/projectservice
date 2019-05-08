@@ -25,23 +25,33 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="collapse navbar-collapse " id="collapsibleNavbar">
             <ul class="navbar-nav mr-auto">
-            <span class="navbar-text" style="color: aliceblue">
-                Панель пользователя
-            </span>
+                <span class="navbar-text" style="color: aliceblue">
+                    Панель директора
+                </span>
                 <li class="nav-item">
-                    <a class="nav-link " href="/manager">Главная</a>
+                    <a class="nav-link " href="/director">Главная</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/manager/orders">Заказы</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbardrop">
+                        Отчет по заказам
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">По дню</a>
+                        <a class="dropdown-item" href="#">По неделе</a>
+                        <a class="dropdown-item" href="#">По месяцу</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/manager/cash">Касса</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/manager/customer">Клиенты</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navbardrop">
+                        Отчет по доходу
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">По дню</a>
+                        <a class="dropdown-item" href="#">По неделе</a>
+                        <a class="dropdown-item" href="#">По месяцу</a>
+                    </div>
                 </li>
             </ul>
-
             <ul class="nav justify-content-end">
                 <span class="navbar-text username">User</span>
                 <li class="nav-item">
@@ -55,6 +65,6 @@
         <p>Выпускная квалификационная работа 2019г.</p>
     </div>
     </body>
-    <script type="text/javascript" src="/js/manager.js"></script>
+    <script type="text/javascript" src="/js/employees.js"></script>
     </html>
 </#macro>

@@ -37,9 +37,6 @@ $(document).ready(function () {
     $('.getorder').on('click', function () {
         document.location.replace("/manager/orders/" + $(this).data('id'));
     });
-    $('.getorder').on('click', function () {
-        document.location.replace("/manager/orders/" + $(this).data('id'));
-    });
     $('.postWait').on('click', function () {
         $.ajax({
             type: 'POST',

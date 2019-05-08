@@ -89,4 +89,5 @@ public class OrdersController {
 		ordersService.delete(order);
 		return ResponseEntity.ok().build();
 	}
+
 }

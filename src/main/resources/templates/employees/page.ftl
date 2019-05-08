@@ -26,19 +26,13 @@
         <div class="collapse navbar-collapse " id="collapsibleNavbar">
             <ul class="navbar-nav mr-auto">
             <span class="navbar-text" style="color: aliceblue">
-                Панель пользователя
+                Панель сотрудника ремонта
             </span>
                 <li class="nav-item">
-                    <a class="nav-link " href="/manager">Главная</a>
+                    <a class="nav-link " href="/employees">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/manager/orders">Заказы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/manager/cash">Касса</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/manager/customer">Клиенты</a>
+                    <a class="nav-link " href="/employees/orders">Заказы</a>
                 </li>
             </ul>
 
@@ -55,6 +49,6 @@
         <p>Выпускная квалификационная работа 2019г.</p>
     </div>
     </body>
-    <script type="text/javascript" src="/js/manager.js"></script>
+    <script type="text/javascript" src="/js/employees.js"></script>
     </html>
 </#macro>
