@@ -1,12 +1,15 @@
 package com.example.projectservice.controller;
 
+import com.example.projectservice.entity.Price;
+import com.example.projectservice.repository.PriceRepository;
 import com.example.projectservice.service.OrdersService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -16,7 +19,8 @@ import java.util.stream.Collectors;
 public class DirectorController {
 	@Inject
 	OrdersService ordersService;
-
+	@Inject
+	PriceRepository priceRepository;
 	@GetMapping("/orders/day")
 	public String getOrdersDay(Model model) {
 		model.addAttribute("doneList", ordersService.getDoneList());
@@ -58,5 +62,48 @@ public class DirectorController {
 		Map<Date, Double> date = ordersService.getListPrice();
 		model.addAttribute("cashList", date);
 		return "/director/reports/profits/day";
+	}
+
+	@GetMapping("/prices")
+	public String getPrices(Model model) {
+		model.addAttribute("priceList", priceRepository.findAll().stream().sorted(Comparator.comparing(Price::getName)).collect(Collectors.toList()));
+		return "/director/priceList/index";
+	}
+
+	@GetMapping("/prices/{id}")
+	public String getUserForEdit(@PathVariable Integer id, Model model) {
+		model.addAttribute("prices", priceRepository.getOne(id));
+		return "/director/priceList/edit";
+	}
+
+	@PostMapping("/prices/{id}")
+	public ResponseEntity editPrices(@PathVariable Integer id, @RequestParam("name") String name,
+									 @RequestParam("price") Float price) {
+		Price editPrice = priceRepository.getOne(id);
+		editPrice.setName(name);
+		editPrice.setPrice(price);
+		priceRepository.save(editPrice);
+		return ResponseEntity.ok().build();
+	}
+
+	@GetMapping("/prices/add")
+	public String getAdd() {
+		return "/director/priceList/add";
+	}
+
+	@PostMapping("/prices/add")
+	public ResponseEntity addPrice(@RequestParam("name") String name,
+								   @RequestParam("price") Float price) {
+		Price addPrice = new Price();
+		addPrice.setName(name);
+		addPrice.setPrice(price);
+		priceRepository.save(addPrice);
+		return ResponseEntity.ok().build();
+	}
+
+	@DeleteMapping("/prices/{id}")
+	public ResponseEntity deletePrice(@PathVariable Integer id) {
+		priceRepository.deleteById(id);
+		return ResponseEntity.ok().build();
 	}
 }

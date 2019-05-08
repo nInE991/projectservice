@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <script type="text/javascript" src="/js/jquery-3.4.0.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.mask.js"></script>
         <script type="text/javascript" src="/js/popper.min.js"></script>
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -35,9 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link " href="/admin/users">Пользователи</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/admin/prices">Прайс-Лист</a>
-                </li>
+                <#--                <li class="nav-item">-->
+                <#--                    <a class="nav-link " href="/admin/prices">Прайс-Лист</a>-->
+                <#--                </li>-->
             </ul>
 
             <ul class="nav justify-content-end">

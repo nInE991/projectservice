@@ -10,8 +10,10 @@ public class Roles {
 	@Column
 	private String role;
 	@Column
-	private String note;
-
+	private String username;
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(nullable = false)
+	private Users users;
 	public Integer getId() {
 		return id;
 	}
@@ -28,11 +30,19 @@ public class Roles {
 		this.role = role;
 	}
 
-	public String getNote() {
-		return note;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setNote(String note) {
-		this.note = note;
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Users getUsers() {
+		return users;
+	}
+
+	public void setUsers(Users users) {
+		this.users = users;
 	}
 }

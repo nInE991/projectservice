@@ -10,7 +10,7 @@ $(document).ready(function () {
                 telephone: $('#telephone').val(),
                 login: $('#login').val(),
                 password: $('#password').val(),
-                roles: $('.roles').val()
+                roles: $('.roles').val(),
             },
             success: function (data) {
                 document.location.replace("/admin/users");
@@ -119,4 +119,5 @@ $(document).ready(function () {
             }
         });
     });
+    $('.phone_with_ddd').mask('+(996) 000 000-000');
 });

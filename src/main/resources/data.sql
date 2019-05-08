@@ -15,18 +15,18 @@ VALUES ('1', 'Диагностика компьютера', 200);
 insert into price(id, name, price)
 VALUES ('2', 'Чистка компьютера', 300);
 
-insert into roles(id, note, role)
-VALUES ('1', 'Администратор', 'ADMIN');
-insert into roles(id, note, role)
-VALUES ('2', 'Директор', 'DIRECTOR');
-insert into roles(id, note, role)
-VALUES ('3', 'Менеджер', 'MANAGER');
-insert into roles(id, note, role)
-VALUES ('4', 'Сотрудник ремонта', 'EMPLOYEES');
-
-
-insert into users(id, password, username, role_id)
-VALUES ('1', 'admin', 'admin', 1);
+-- insert into roles(id, note, role)
+-- VALUES ('1', 'Администратор', 'ADMIN');
+-- insert into roles(id, note, role)
+-- VALUES ('2', 'Директор', 'DIRECTOR');
+-- insert into roles(id, note, role)
+-- VALUES ('3', 'Менеджер', 'MANAGER');
+-- insert into roles(id, note, role)
+-- VALUES ('4', 'Сотрудник ремонта', 'EMPLOYEES');
+--
+--
+-- insert into users(id, password, username, role_id)
+-- VALUES ('1', 'admin', 'admin', 1);
 
 -- insert into customer(id, lastname, name, telephone) VALUES ('1','test','test','test');
 

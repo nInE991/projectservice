@@ -36,9 +36,9 @@
                         Отчет по заказам
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">По дню</a>
-                        <a class="dropdown-item" href="#">По неделе</a>
-                        <a class="dropdown-item" href="#">По месяцу</a>
+                        <a class="dropdown-item" href="/director/orders/day">По дню</a>
+                        <a class="dropdown-item" href="/director/orders/week">По неделе</a>
+                        <a class="dropdown-item" href=/director/orders/month">По месяцу</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -46,10 +46,13 @@
                         Отчет по доходу
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">По дню</a>
-                        <a class="dropdown-item" href="#">По неделе</a>
-                        <a class="dropdown-item" href="#">По месяцу</a>
+                        <a class="dropdown-item" href="/director/cash/day">По дню</a>
+                        <a class="dropdown-item" href="/director/cash/week">По неделе</a>
+                        <a class="dropdown-item" href="/director/cash/month">По месяцу</a>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/director/prices">Прайс-лист</a>
                 </li>
             </ul>
             <ul class="nav justify-content-end">
@@ -65,6 +68,6 @@
         <p>Выпускная квалификационная работа 2019г.</p>
     </div>
     </body>
-    <script type="text/javascript" src="/js/employees.js"></script>
+    <script type="text/javascript" src="/js/director.js"></script>
     </html>
 </#macro>

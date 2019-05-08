@@ -14,7 +14,8 @@
                 </div>
                 <div class="form-group">
                     <label for="telephone">Телефон:</label>
-                    <input class="form-control phone_with_ddd" id="telephone" name="telephone" type="text" value="996 ">
+                    <input class="form-control phone_with_ddd" id="telephone" name="telephone" type="text"
+                           value="+996 ">
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary saveNewCustomer" type="submit">Сохранить</button>

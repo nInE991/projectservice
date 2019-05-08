@@ -1,11 +1,11 @@
-<#import "*/admin/page.ftl" as a>
+<#import "*/director/page.ftl" as a>
 <@a.basis>
     <div class="container " style="margin-top: 30px">
         <div class="clearfix">
             <span class="float-left"><h2>Прайс-лист услуг</h2></span>
             <div class="float-right">
             <span class=" pr-2">
-                <a class=" mt-1  btn btn-dark" href="/admin/prices/add" role="button">Добавить</a>
+                <a class=" mt-1  btn btn-dark" href="/director/prices/add" role="button">Добавить</a>
             </span>
             </div>
 

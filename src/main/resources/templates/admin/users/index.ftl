@@ -37,7 +37,7 @@
                             <div class="mt-1">${employees.lastName}</div>
                         </td>
                         <td>
-                            <div class="mt-1">${employees.users.role.role}</div>
+                            <div class="mt-1">${employees.users.position}</div>
                         </td>
                         <td>
                             <div class="mt-1">${employees.telephone}</div>

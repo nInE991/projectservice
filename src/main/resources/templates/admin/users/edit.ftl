@@ -14,7 +14,7 @@
             <label for="role">Должность:</label>
             <select type="text" class="form-control roles" name="role">
                 <#list rolesList as roles>
-                    <option value="${roles.id}">${roles.role}</option>
+                    <option value="${roles?index}" <#if employees.users.position==roles>selected</#if>>${roles}</option>
                 </#list>
             </select>
         </div>
@@ -25,7 +25,8 @@
         </div>
         <div class="form-group">
             <label for="telephone">Телефон:</label>
-            <input type="tel" class="form-control" name="telephone" id="telephone" value="${employees.telephone}">
+            <input type="text" class="form-control phone_with_ddd" name="telephone" id="telephone"
+                   value="${employees.telephone}">
         </div>
 
         <div class="form-group">

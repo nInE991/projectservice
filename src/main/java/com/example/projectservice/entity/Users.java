@@ -11,10 +11,10 @@ public class Users {
 	private String username;
 	@Column
 	private String password;
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.DETACH)
-	@JoinColumn(nullable = false)
-	private Roles role;
-
+	@Column
+	private Boolean enable;
+	@Column
+	private String position;
 	public Integer getId() {
 		return id;
 	}
@@ -39,11 +39,19 @@ public class Users {
 		this.password = password;
 	}
 
-	public Roles getRole() {
-		return role;
+	public Boolean getEnable() {
+		return enable;
 	}
 
-	public void setRole(Roles role) {
-		this.role = role;
+	public void setEnable(Boolean enable) {
+		this.enable = enable;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
 	}
 }

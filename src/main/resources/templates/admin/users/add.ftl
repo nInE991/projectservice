@@ -17,8 +17,9 @@
                     <select class="form-control roles" name="role" type="text">
                         <option value=""></option>
                         <#list rolesList as roles>
-                            <option value="${roles.id}">${roles.role}</option>
+                            <option value="${roles?index}">${roles}</option>
                         </#list>
+                    </select>
                     </select>
                 </div>
                 <div class="form-group">
@@ -27,7 +28,8 @@
                 </div>
                 <div class="form-group">
                     <label for="telephone">Телефон:</label>
-                    <input class="form-control" id="telephone" name="telephone" type="tel">
+                    <input class="form-control phone_with_ddd" id="telephone" name="telephone" type="text"
+                           value="+996 ">
                 </div>
 
                 <div class="form-group">

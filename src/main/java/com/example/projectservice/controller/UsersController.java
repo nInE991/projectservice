@@ -1,26 +1,9 @@
 package com.example.projectservice.controller;
 
-import com.example.projectservice.entity.Employees;
-import com.example.projectservice.entity.Users;
-import com.example.projectservice.repository.EmployeesRepository;
-import com.example.projectservice.repository.RolesRepository;
-import com.example.projectservice.repository.UsersRepository;
-import com.example.projectservice.service.EmployeesService;
-import com.example.projectservice.service.RolesService;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
-import javax.inject.Inject;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-@Controller
-@RequestMapping("/admin/users")
+/*@Controller
+@RequestMapping("/admin/users")*/
 public class UsersController {
-	@Inject
+/*	@Inject
 	EmployeesService service;
 	@Inject
 	RolesService rolesService;
@@ -31,20 +14,20 @@ public class UsersController {
 	@Inject
 	UsersRepository usersRepository;
 
-	@GetMapping()
+	@GetMapping("/users")
 	public String getUsers(Model model) {
 		model.addAttribute("employeesList", employeesRepository.findAll());
 		return "/admin/users/index";
 	}
 
-	@GetMapping("/{id}")
+	@GetMapping("/users/{id}")
 	public String getUserForEdit(@PathVariable Integer id, Model model) {
 		model.addAttribute("employees", employeesRepository.getOne(id));
 		model.addAttribute("rolesList", rolesService.getList());
 		return "/admin/users/edit/index";
 	}
 
-	@PostMapping("/{id}")
+	@PostMapping("/users/{id}")
 	public ResponseEntity editUser(@PathVariable Integer id,
 								   @RequestParam("name") String name,
 								   @RequestParam("lastName") String lastname,
@@ -76,19 +59,19 @@ public class UsersController {
 		return ResponseEntity.ok().build();
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/users/{id}")
 	public ResponseEntity deleteUser(@PathVariable Integer id) {
 		service.DeleteEmployees(id);
 		return ResponseEntity.ok().build();
 	}
 
-	@GetMapping("/registration")
+	@GetMapping("/users/registration")
 	public String registrationUser(Model model) {
 		model.addAttribute("rolesList", rolesRepository.findAll());
 		return "/admin/users/add/index";
 	}
 
-	@PostMapping("/registration")
+	@PostMapping("/users/registration")
 	public ResponseEntity addEmployees(@RequestParam("name") String name, @RequestParam("lastName") String lastname,
 									   @RequestParam("birthDate") String birthDate,
 									   @RequestParam("telephone") String telephone,
@@ -117,5 +100,5 @@ public class UsersController {
 		users.setRole(rolesRepository.getOne(roles));
 		service.Save(employees, users);
 		return ResponseEntity.ok().build();
-	}
+	}*/
 }
