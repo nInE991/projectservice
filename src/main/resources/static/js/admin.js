@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    $.ajax({
+        type: 'GET',
+        url: '/username',
+        dataType: 'text',
+        success: function (data) {
+            $('#label_username').text(data);
+        }
+    });
     $('.registration').on('click', function () {
         $.ajax({
             type: 'POST',

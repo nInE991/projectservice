@@ -76,6 +76,5 @@
         <p>Выпускная квалификационная работа 2019г.</p>
     </div>
     </body>
-    <script type="text/javascript" src="/js/main.js"></script>
     </html>
 </#macro>

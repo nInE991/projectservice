@@ -36,15 +36,12 @@
                 <li class="nav-item">
                     <a class="nav-link " href="/admin/users">Пользователи</a>
                 </li>
-                <#--                <li class="nav-item">-->
-                <#--                    <a class="nav-link " href="/admin/prices">Прайс-Лист</a>-->
-                <#--                </li>-->
             </ul>
 
             <ul class="nav justify-content-end">
-                <span class="navbar-text username">User</span>
+                <span class="navbar-text" id="label_username"></span>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: lightgrey">Выход</a>
+                    <a class="nav-link" href="/logout" style="color: lightgrey">Выход</a>
                 </li>
             </ul>
         </div>
@@ -54,7 +51,6 @@
         <p>Выпускная квалификационная работа 2019г.</p>
     </div>
     </body>
-
     <script type="text/javascript" src="/js/admin.js"></script>
     </html>
 </#macro>

@@ -56,9 +56,9 @@
                 </li>
             </ul>
             <ul class="nav justify-content-end">
-                <span class="navbar-text username">User</span>
+                <span class="navbar-text" id="label_username"></span>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" style="color: lightgrey">Выход</a>
+                    <a class="nav-link" href="/logout" style="color: lightgrey">Выход</a>
                 </li>
             </ul>
         </div>

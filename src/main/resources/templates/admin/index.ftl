@@ -13,17 +13,6 @@
                     </div>
                 </div>
             </div>
-            <#--            <div class="col-4">-->
-            <#--                <div class="card">-->
-            <#--                    <div class="card-body">-->
-            <#--                        <h5 class="card-title">Прайс-Лист</h5>-->
-            <#--                        <div class="btn-group-vertical">-->
-            <#--                            <a class="btn btn-link  text-left" href="#" style="color: black">Добавление</a>-->
-            <#--                            <a class="btn btn-link  text-left" href="#" style="color: black">Изменение</a>-->
-            <#--                        </div>-->
-            <#--                    </div>-->
-            <#--                </div>-->
-            <#--            </div>-->
         </div>
     </div>
 </@a.basis>

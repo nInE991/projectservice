@@ -5,7 +5,7 @@
             <h3>
                 <small>Вход только для сотрудников!</small>
             </h3>
-            <form action="/action_page.php">
+            <form action="/login" method="post">
                 <div class="form-group">
                     <label for="login">Логин:</label>
                     <input class="form-control" name="username" id="login" type="text">

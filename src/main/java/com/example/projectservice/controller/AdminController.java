@@ -7,6 +7,7 @@ import com.example.projectservice.repository.UsersRepository;
 import com.example.projectservice.service.EmployeesService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -67,8 +68,12 @@ public class AdminController {
 		users.setUsername(login);
 		if (users.getPassword().isEmpty()) {
 			return ResponseEntity.status(403).build();
+		} else if (!users.getPassword().equals(password)) {
+			PasswordEncoder passwordEncoder = (PasswordEncoder) context.getBean("encoder");
+			users.setPassword(passwordEncoder.encode(password));
+		} else {
+			users.setPassword(password);
 		}
-		users.setPassword(password);
 		users.setEnable(true);
 		service.Save(employees, users, roles);
 		return ResponseEntity.ok().build();
@@ -112,7 +117,8 @@ public class AdminController {
 		employees.setTelephone(telephone);
 		Users users = new Users();
 		users.setUsername(login);
-		users.setPassword(password);
+		PasswordEncoder passwordEncoder = (PasswordEncoder) context.getBean("encoder");
+		users.setPassword(passwordEncoder.encode(password));
 		users.setEnable(true);
 		service.Save(employees, users, roles);
 		return ResponseEntity.ok().build();

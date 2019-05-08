@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    $.ajax({
+        type: 'GET',
+        url: '/username',
+        dataType: 'text',
+        success: function (data) {
+            $('#label_username').text(data);
+        }
+    });
     $('.getorder').on('click', function () {
         document.location.replace("/employees/orders/" + $(this).data('id'));
     });

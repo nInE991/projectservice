@@ -1,4 +1,12 @@
 $(document).ready(function () {
+    $.ajax({
+        type: 'GET',
+        url: '/username',
+        dataType: 'text',
+        success: function (data) {
+            $('#label_username').text(data);
+        }
+    });
     $('.editPrice').on('click', function () {
         document.location.replace("/director/prices/" + $(this).data('id'));
     });
